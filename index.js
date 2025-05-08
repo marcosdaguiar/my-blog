@@ -2,7 +2,7 @@ const {connectDB} = require("./database/connection");
 const express = require("express");
 const cors = require("cors");
 
-console.log("Node app started...");
+console.log("Node app started..");
 
 //connect to database
 connectDB();
@@ -19,11 +19,9 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 
-
 // Create routes
 const article_route = require("./routes/Articles_Routes");
 app.use("/api", article_route);
-
 
 
 
