@@ -1,13 +1,14 @@
-import React, { use } from 'react'
 import {useState, useEffect} from 'react'
 import { Global } from '../../helpers/Global'
 import { Request } from '../../helpers/Request'
+import { List } from './List'
 
 
 
 export const Articles = () => {
 
   const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
 
@@ -16,43 +17,18 @@ export const Articles = () => {
 
   const getArticles = async () => {
     const {data, loading} = await Request(Global.url+'articles', 'GET')
-
     if(data.status === 'success'){
       setArticles(data.articles);
+      setLoading(false)
     }else{
-      console.log('Error in the request');
+      console.log('Error in the "GET" request');
     }
   }
 
-
   return (
     <>
-      {
-      articles.length >= 1 ? (
-        articles.map(article => {
-          return(
-            <article key={article.id} className="article-item">
-            <div className='mask'>
-              <img src={article.image} alt="" />
-            </div>
-            <div className="article-info">
-              <h3 className="title">{article.title}</h3>
-              <p className="description">{article.content}</p>
-              <button className="edit">Editar</button>
-              <button className="delete">Borrar</button>
-            </div>
-            </article>
-          )
-        })
-      )
-      :
-      (
-        <h1>No articles to display</h1>
-      )
+      {loading ? "Loading..." : <List articles={articles} setArticles={setArticles}/>   
     }
-
-      
-    
     </>
   )
 }
