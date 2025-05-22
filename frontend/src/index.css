@@ -4,6 +4,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0px;
     margin: 0px;
+    text-align: center;
 }
 
 .layout{
@@ -118,6 +119,46 @@ body{
     color: #454545;
 }
 
+input[type="text"],
+textarea{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f6f7f9;
+    color: #454545;
+    width: 80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+.form-group [type="text"],
+.form-group textarea,
+.form-group input[type="file"]{
+    border: 1px solid #dbdbdb;
+    outline: 0;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.form-group{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.form-group label{
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #454545;
+    margin-bottom: 4px;
+
+}
+
 .article-item .edit{
     margin-right: 20px;
     
@@ -230,7 +271,6 @@ input[type="button"]{
     width: 90%;
 
 }
-
 
 .footer{
     grid-area: footer;
