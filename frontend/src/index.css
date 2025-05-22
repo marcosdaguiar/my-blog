@@ -16,11 +16,11 @@ body{
         "nav nav nav nav"
         "content content content sidebar"
         "footer footer footer footer"
-    ;
-    
+    ;   
     grid-template-rows: 100px 70px auto 70px;
 }
-/*estilos cabezera*/
+
+/*header style*/
 .header{
     grid-area: header;
     background: white;
@@ -29,8 +29,8 @@ body{
 
     display: flex;
     justify-content: center;
-
 }
+
 .logo{
     background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
     width: 40px;
@@ -38,16 +38,15 @@ body{
     border-radius: 300px;
     margin-top: 30px;
 }
+
 .header h1{
     margin-left: 15px;
     margin-top:30px
 }
 
-
 .nav{
     grid-area: nav;
     background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
-
 }
 
 .nav > ul{
@@ -86,30 +85,30 @@ body{
     width: 80dvi;
 }
 
-
 .article-item{
     display: flex;
+    text-align: left;
     flex-grow: 1;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
-    margin:20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-height: 180px;
+    margin: 25px auto;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    width: 85%;
+    padding: 10px 55px 10px 55px;
 }
 
 .article-item .mask{
     width: 8%;
     overflow: hidden;
     margin-right: 3%;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
 .article-item .mask img{
     width: 100%;
-
 }
 
 .article-item h3{
@@ -143,6 +142,7 @@ textarea{
     margin-top: 0px;
     margin-bottom: 20px;
 }
+
 .form-group{
     width: 50%;
     margin: 0 auto;
@@ -156,13 +156,12 @@ textarea{
     font-weight: 400;
     color: #454545;
     margin-bottom: 4px;
-
 }
 
 .article-item .edit{
     margin-right: 20px;
-    
 }
+
 .jumbo{
     width: 85%;
     padding: 55px;
@@ -171,7 +170,6 @@ textarea{
     box-shadow: 0px 0px 6px #ddd;
     margin: 25px auto;
     padding-bottom: 75px;
-
 }
 
 .jumbo h1{
@@ -210,11 +208,9 @@ input[type="button"]{
 
 .article-item .edit:hover{
     background: #0faa83;
-
 }
 .article-item .delete:hover{
     background: #9b0202;
-
 }
 
 .sidebar{
@@ -233,7 +229,6 @@ input[type="button"]{
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
-
 }
 
 
@@ -253,7 +248,6 @@ input[type="button"]{
     border-color: #dbdbdb;
     border-width: 1px;
     width: 90%;
-
 }
 
 .sidebar textarea{
@@ -269,7 +263,6 @@ input[type="button"]{
     border-color: #dbdbdb;
     border-width: 1px;
     width: 90%;
-
 }
 
 .footer{
@@ -287,7 +280,6 @@ input[type="button"]{
         flex-flow: column wrap;
         align-items: center;
     }
-
     .article-item{
         width: 80%;
     }
