@@ -1,6 +1,6 @@
 /*estilos generales*/
 body{
-    background-color: rgb(66, 51, 30);
+    background: #f6f7f9;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0px;
     margin: 0px;
@@ -8,7 +8,7 @@ body{
 }
 
 .layout{
-    width: 100%;
+    width: 100dvw;
     height: 100dvh;
     display: grid;
     grid-template-areas: 
@@ -95,8 +95,12 @@ body{
     margin: 25px auto;
     margin-bottom: 0px;
     margin-top: 25px;
-    width: 85%;
-    padding: 10px 55px 10px 55px;
+    width: 95%;
+    --padding: 1% 6% 1% 6%;
+}
+
+.article-info{
+    margin-bottom: 1%;
 }
 
 .article-item .mask{
@@ -116,6 +120,7 @@ body{
     text-align: left;
     font-weight: 500;
     color: #454545;
+    margin-top: 5%;
 }
 
 input[type="text"],
@@ -143,6 +148,11 @@ textarea{
     margin-bottom: 20px;
 }
 
+.form-group textarea{
+    height: 150px;
+    resize: none;
+}
+
 .form-group{
     width: 50%;
     margin: 0 auto;
@@ -162,14 +172,14 @@ textarea{
     margin-right: 20px;
 }
 
-.jumbo{
-    width: 85%;
-    padding: 55px;
+.jumbo{ 
+    width: 95%;
+    height: 95%;
+    --padding: 1% 6% 5% 6%;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
     margin: 25px auto;
-    padding-bottom: 75px;
 }
 
 .jumbo h1{
