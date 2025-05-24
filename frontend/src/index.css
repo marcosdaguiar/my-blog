@@ -1,6 +1,6 @@
 /*estilos generales*/
 body{
-    background: #f6f7f9;
+    background: #c7c7c7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0px;
     margin: 0px;
@@ -17,7 +17,8 @@ body{
         "content content content sidebar"
         "footer footer footer footer"
     ;   
-    grid-template-rows: 100px 70px auto 70px;
+    grid-template-rows: 100px 70px auto 50px;
+    grid-template-columns: 1fr 1fr 1fr 20%;
 }
 
 /*header style*/
@@ -46,7 +47,7 @@ body{
 
 .nav{
     grid-area: nav;
-    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+    background: linear-gradient(90deg, #1e2950 10%, #415163 100%);
 }
 
 .nav > ul{
@@ -123,6 +124,16 @@ body{
     margin-top: 5%;
 }
 
+.article-item h3 a{
+    text-decoration: none;
+    color: #000;
+}
+
+.article-item h3 a:hover{
+    text-decoration: none;
+    color: blue;
+}
+
 input[type="text"],
 textarea{
     display: block;
@@ -196,10 +207,25 @@ textarea{
     color: #454545;
 }
 
+.jumbo .mask{
+    width: 100%;
+    overflow: hidden;
+    margin-right: 3%;
+    padding-top: 0px;
+    margin-top: 20px;
+
+}
+
+.jumbo .mask img{
+    height: 300px;
+}
+
+
 .btn,
 button,
 input[type="submit"],
-input[type="button"]{
+input[type="button"],
+.edit{
     width: 100px;
     background: #0b70e1;
     color: white;
@@ -276,12 +302,13 @@ input[type="button"]{
 }
 
 .footer{
+    display: flex;
+    align-items: center;
     grid-area: footer;
-    background: #d1defa;
-    color: #454545;
+    background: linear-gradient(90deg, #1e2950 10%, #415163 100%);
+    color: #ffffff;
     border-top: 1px solid white;
     text-align: left;
-    line-height: 68px;
     padding-left: 25px;
 }
 
