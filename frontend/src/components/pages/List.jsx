@@ -1,12 +1,11 @@
 import React from 'react'
 import { Global } from '../../helpers/Global';
 import { Request } from '../../helpers/Request';
+import { Link } from 'react-router-dom';
 
 export const List = ({ articles, setArticles }) => {
     if(!articles || articles.length === 0) return (
-        <h1>No articles found</h1>
-    
-    
+        <h1>No articles found</h1>   
     );
 
     const deleteArticle = async(id) =>{
@@ -16,7 +15,6 @@ export const List = ({ articles, setArticles }) => {
             setArticles(updatedArticles)
         }
     }
-
 
     return ( 
         articles.map(article => {
@@ -28,9 +26,9 @@ export const List = ({ articles, setArticles }) => {
                    
                     </div>
                     <div className="article-info">
-                        <h3 className="title">{article.title}</h3>
+                        <h3 className="title"><Link to ={'/article/' + article._id}>{article.title}</Link></h3>
                         <p className="description">{article.content}</p>
-                        <button className="edit">Edit</button>
+                        <Link to={'/edit/'+ article._id} className="edit">Edit</Link>
                         <button className="delete" onClick={() => {deleteArticle(article._id)}}>Delete</button>
                     </div>
                 </article>
